@@ -1,0 +1,283 @@
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(14, 0, 27);
+    margin: 0;
+    padding: 0;
+    
+
+}
+.section {
+    width: 100%;
+    margin: 0px auto;           
+    background-color:rgb(14, 0, 27);
+    color:white;
+    padding: 50px;
+    border-radius: 5px;
+    
+}
+.section h1,h2{
+    text-align: center;
+    
+}
+
+.section1 h1, h2{
+    color:rgb(68, 49, 49)
+}
+
+#links {
+    position:sticky;       
+    top: 0;                
+    left: 0;
+    width: 100% auto;           
+    background-color: rgb(146, 77, 243);  
+    padding: 25px 0;
+    text-align: center;
+    font-weight: 300;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+    z-index: 1000;  
+}      
+
+#links {
+    text-align: center;          
+    margin-bottom: 40px;         
+    font-weight: 600;            
+}
+
+#links a {
+    display: inline-block;       
+    margin: 0 5px;              
+    text-decoration: none;       
+    color: rgb(255, 255, 255);                 
+    font-size: 14px;             
+    transition: color 0.2s;      
+}
+ 
+#links a:hover {
+    color: #007BFF;             
+}
+
+#footer{
+    text-align: center;
+    margin-bottom: 30px
+    font-weight 600 auto;
+    color: white;
+}
+
+
+#header {
+    text-align: center;
+    padding: 40px;
+    margin-top: 0%;
+    
+}
+
+
+#top-section {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    gap: 100px; 
+    color:white
+    
+}
+
+
+#profile {
+    flex: 1;
+    text-align: center;
+}
+
+
+#summary {
+    flex: 2;
+    
+
+}
+
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;   
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+
+.contact-links a {
+    display:flexbox;
+    margin: 5px 0;
+    text-decoration:solid;
+    color: #007BFF;
+    font-weight: 600;
+}
+
+.contact-links a:hover {
+    text-decoration:underline;
+
+}
+
+
+
+#Education h1,h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: rgb(68, 49, 49);
+}
+
+.edu-cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 10px;
+    flex-wrap: wrap; 
+    padding: 0 20px; 
+    box-sizing: border-box;
+}
+
+
+.edu-card {
+    background: rgb(132, 93, 185);
+    border-radius: 10px;
+    padding: 25px;
+    flex: 0 1 300px;   /* allows horizontal layout */
+    max-width: 350px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+    text-align: left; /* left alignment inside cards */
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: rgb(0, 0, 0);
+}
+
+
+.edu-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* CARD HEADINGS */
+.edu-card h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+/* CARD TEXT */
+.edu-card p {
+    margin: 6px 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* RESPONSIVE (tablet) */
+@media (max-width: 768px) {
+    .edu-card {
+        flex: 0 1 45%;
+    }
+}
+
+/* RESPONSIVE (mobile) */
+@media (max-width: 500px) {
+    .edu-card {
+        flex: 0 1 90%;
+    }
+}
+
+/* SECTION LAYOUT */
+.section,
+.section1 {
+    min-height: calc(100vh - 100px); /* full screen minus nav */
+    scroll-margin-top: 120px;        /* spacing for the nav */
+    padding: 50px;
+    box-sizing: border-box;
+}.section,
+.section1 {
+    position: relative;
+}
+
+.section:before,
+.section1:before {
+    content: "";
+    display: block;
+    height: 120px;         /* navbar height */
+    margin-top: -120px;     /* same negative offset */
+    visibility: hidden;
+}
+
+/* Work Experience Section */
+#Experience h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  
+}
+
+/* Vertical list container */
+.experience-container {
+  display: flex;
+  flex-direction: column; /* vertical stacking */
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px; /* space between experience cards */
+  padding: 0 20px;
+  box-sizing:content-box;
+}
+
+/* Individual work experience card */
+.work-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: rgb(50, 45, 85);
+  border-radius: 8px;
+  margin-bottom: 2px;
+  padding: 25px;
+  width: 100%;
+  max-width: 1200px;
+  color: rgba(7, 8, 0, 0.877);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect */
+.work-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Job titles */
+.work-card h3 {
+  margin-bottom: 8px;
+  font-size: 22px;
+  color: #fff;
+}
+
+/* List styles for responsibilities */
+.work-card ul {
+  margin: 10px 0 0 18px;
+  padding: 0;
+  list-style-type: disc;
+}
+
+.work-card ul li {
+  margin-bottom: 6px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.work-card-img img {
+    width: 250px;                  /* set a reasonable size */
+    height: 200px;
+    object-fit:contain;
+    border-radius: 10px;
+}
+
+.work-card-video video {
+    width: 250px;                  /* set a reasonable size */
+    height: 200px;
+    object-fit:cover;
+    border-radius: 5px;
+    
+}
